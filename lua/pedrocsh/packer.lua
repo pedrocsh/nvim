@@ -19,6 +19,9 @@ return require('packer').startup(function(use)
   -- formatter
   use 'stevearc/conform.nvim'
 
+  -- ts-comment
+  use 'folke/ts-comments.nvim'
+
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',

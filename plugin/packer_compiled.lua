@@ -154,6 +154,11 @@ _G.packer_plugins = {
     path = "/home/pedrocsh/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["ts-comments.nvim"] = {
+    loaded = true,
+    path = "/home/pedrocsh/.local/share/nvim/site/pack/packer/start/ts-comments.nvim",
+    url = "https://github.com/folke/ts-comments.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/pedrocsh/.local/share/nvim/site/pack/packer/start/undotree",
