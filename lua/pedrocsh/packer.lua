@@ -16,6 +16,9 @@ return require('packer').startup(function(use)
   -- git highlight
   use 'lewis6991/gitsigns.nvim'
 
+  -- formatter
+  use 'stevearc/conform.nvim'
+
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
