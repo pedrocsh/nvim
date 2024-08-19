@@ -13,6 +13,9 @@ return require('packer').startup(function(use)
   -- theme
   use { "catppuccin/nvim", as = "catppuccin" }
 
+  -- git highlight
+  use 'lewis6991/gitsigns.nvim'
+
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
