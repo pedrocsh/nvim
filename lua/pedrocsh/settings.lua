@@ -25,3 +25,4 @@ vim.opt.updatetime = 50
 -- vim.opt.colorcolumn = "80"
 vim.opt.pumheight = 10
 -- vim.opt.cmdheight = 2
+vim.g.editorconfig = true
