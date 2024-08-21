@@ -109,6 +109,11 @@ _G.packer_plugins = {
     path = "/home/pedrocsh/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["mini.pairs"] = {
+    loaded = true,
+    path = "/home/pedrocsh/.local/share/nvim/site/pack/packer/start/mini.pairs",
+    url = "https://github.com/echasnovski/mini.pairs"
+  },
   ["neo-tree.nvim"] = {
     loaded = true,
     path = "/home/pedrocsh/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",

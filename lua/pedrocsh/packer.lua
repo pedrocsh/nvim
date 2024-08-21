@@ -19,6 +19,9 @@ return require('packer').startup(function(use)
   -- formatter
   use 'stevearc/conform.nvim'
 
+  -- auto-pairs
+  use 'echasnovski/mini.pairs'
+
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
