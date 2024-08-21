@@ -1,8 +1,6 @@
 local lsp_zero = require('lsp-zero')
 local cmp = require('cmp')
 
--- lsp_attach is where you enable features that only work
--- if there is a language server active in the file
 local lsp_attach = function(_, bufnr)
   local opts = { buffer = bufnr }
 
@@ -30,7 +28,6 @@ cmp.setup({
   },
   snippet = {
     expand = function(args)
-      -- You need Neovim v0.10 to use vim.snippet
       vim.snippet.expand(args.body)
     end,
   },
@@ -47,8 +44,6 @@ cmp.setup({
 
 require('mason').setup()
 require('mason-lspconfig').setup({
-  -- Replace the language servers listed here
-  -- with the ones you want to install
   ensure_installed = { 'lua_ls', 'rust_analyzer', 'tsserver' },
   handlers = {
     function(server_name)

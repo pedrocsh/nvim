@@ -89,11 +89,6 @@ _G.packer_plugins = {
     path = "/home/pedrocsh/.local/share/nvim/site/pack/packer/start/conform.nvim",
     url = "https://github.com/stevearc/conform.nvim"
   },
-  ["efm-langserver"] = {
-    loaded = true,
-    path = "/home/pedrocsh/.local/share/nvim/site/pack/packer/start/efm-langserver",
-    url = "https://github.com/mattn/efm-langserver"
-  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "/home/pedrocsh/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
