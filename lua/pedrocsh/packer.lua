@@ -22,6 +22,9 @@ return require('packer').startup(function(use)
   -- auto-pairs
   use 'echasnovski/mini.pairs'
 
+  -- buffer
+  use { 'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons' }
+
   -- telescope
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.8',
