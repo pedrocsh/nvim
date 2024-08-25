@@ -1,28 +1,44 @@
-vim.opt.guicursor = ""
-vim.opt.nu = true
-vim.opt.relativenumber = true
-vim.opt.clipboard = "unnamedplus"
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.smartindent = true
-vim.opt.smarttab = true
-vim.opt.autoindent = true
-vim.opt.cursorline = true
-vim.opt.wrap = false
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-vim.opt.undofile = true
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
-vim.opt.termguicolors = true
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
-vim.opt.updatetime = 50
--- vim.opt.colorcolumn = "80"
-vim.opt.pumheight = 10
--- vim.opt.cmdheight = 2
-vim.g.editorconfig = true
+local globals = {
+    mapleader = ' ',
+    maplocalleader = ' ',
+    have_nerd_font = true,
+    editorconfig = true
+}
+
+local options = {
+    guicursor = "",
+    number = true,
+    relativenumber = true,
+    tabstop = 4,
+    softtabstop = 4,
+    shiftwidth = 4,
+    expandtab = true,
+    smartindent = true,
+    smarttab = true,
+    autoindent = true,
+    showmode = false,
+    backup = false,
+    breakindent = true,
+    undodir = os.getenv("HOME") .. "/.vim/undodir",
+    undofile = true,
+    signcolumn = 'yes',
+    updatetime = 250,
+    timeoutlen = 300,
+    inccommand = 'split',
+    cursorline = true,
+    scrolloff = 10,
+    termguicolors = true
+}
+
+for k, v in pairs(globals) do
+    vim.g[k] = v
+end
+
+for k, v in pairs(options) do
+    vim.opt[k] = v
+end
+
+vim.schedule(function()
+    vim.opt.clipboard = 'unnamedplus'
+end)
+
