@@ -13,6 +13,7 @@ local options = {
     undofile = true,
     updatetime = 250,
     shiftwidth = 4,
+    signcolumn = "yes",
     smarttab = true,
     softtabstop = 0,
     tabstop = 4,
