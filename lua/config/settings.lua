@@ -14,6 +14,7 @@ local options = {
     undofile = true,
     updatetime = 250,
     shiftwidth = 4,
+    showmode = false,
     signcolumn = "yes",
     smarttab = true,
     softtabstop = 0,
