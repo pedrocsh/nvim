@@ -1,4 +1,5 @@
 local options = {
+    autoindent = true,
     autoread = true,
     autowrite = true,
     backup = false,
