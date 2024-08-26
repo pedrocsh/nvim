@@ -2,6 +2,7 @@ local options = {
     autoread = true,
     autowrite = true,
     backup = false,
+    breakindent = true,
     -- cursorline = true,
     expandtab = true,
     guicursor = "",
