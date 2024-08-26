@@ -5,6 +5,7 @@ local options = {
     breakindent = true,
     -- cursorline = true,
     expandtab = true,
+    fileencoding = 'utf-8',
     guicursor = "",
     number = true,
     relativenumber = true,
