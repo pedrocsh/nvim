@@ -34,3 +34,7 @@ end
 for k, v in pairs(globals) do
     vim.g[k] = v
 end
+
+vim.schedule(function()
+    vim.opt.clipboard = "unnamedplus"
+end)
