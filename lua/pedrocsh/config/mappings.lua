@@ -15,9 +15,9 @@ map("n", "<C-l>", "<C-w><C-l>")
 map("n", "<C-j>", "<C-w><C-j>")
 map("n", "<C-k>", "<C-w><C-k>")
 map("x", "<leader>p", [["_dP]])
-map({"n", "v"}, "<leader>y", [["+y]])
+map({ "n", "v" }, "<leader>y", [["+y]])
 map("n", "<leader>Y", [["+Y]])
-map({"n", "v"}, "<leader>d", [["_d]])
+map({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.api.nvim_create_autocmd("TextYankPost", {
   desc = "Highlight when yanking (copying) text",

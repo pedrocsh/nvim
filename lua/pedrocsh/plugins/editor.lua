@@ -10,7 +10,7 @@ return {
     },
     cmd = "Neotree",
     keys = {
-      { "<leader>e", ":Neotree toggle<CR>", silent = true }
+      { "<leader>e", ":Neotree toggle<CR>", silent = true },
     },
     opts = {
       close_if_last_window = true,
@@ -20,9 +20,9 @@ return {
           ["<space>"] = "none",
           ["l"] = "open",
           ["h"] = "close_node",
-        }
-      }
-    }
+        },
+      },
+    },
   },
   {
     "lewis6991/gitsigns.nvim",

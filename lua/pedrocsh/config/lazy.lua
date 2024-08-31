@@ -7,7 +7,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "--branch=stable",
-    lazyrepo, lazypath
+    lazyrepo,
+    lazypath,
   })
 
   if vim.v.shell_error ~= 0 then
@@ -28,9 +29,9 @@ vim.g.maplocalleader = "\\"
 
 require("lazy").setup({
   spec = {
-    { import = "pedrocsh.plugins" }
+    { import = "pedrocsh.plugins" },
   },
   change_detection = {
-    notify = false
-  }
+    notify = false,
+  },
 })

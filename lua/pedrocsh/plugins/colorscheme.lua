@@ -8,7 +8,7 @@ return {
       no_bold = true,
     },
     init = function()
-      vim.cmd.colorscheme "catppuccin"
-    end
-  }
+      vim.cmd.colorscheme("catppuccin")
+    end,
+  },
 }

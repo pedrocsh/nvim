@@ -29,20 +29,20 @@ return {
 
       return {
         snippet = {
-          expand = function (args)
+          expand = function(args)
             luasnip.lsp_expand(args.body)
-          end
+          end,
         },
         completion = {
-          completeopt = "menu,menuone,noinsert"
+          completeopt = "menu,menuone,noinsert",
         },
-        mapping = cmp.mapping.preset.insert {
+        mapping = cmp.mapping.preset.insert({
           ["<C-n>"] = cmp.mapping.select_next_item(),
           ["<C-p>"] = cmp.mapping.select_prev_item(),
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
-          ["<C-y>"] = cmp.mapping.confirm { select = true },
-          ["<C-Space>"] = cmp.mapping.complete {},
+          ["<C-y>"] = cmp.mapping.confirm({ select = true }),
+          ["<C-Space>"] = cmp.mapping.complete({}),
           ["<C-l>"] = cmp.mapping(function()
             if luasnip.expand_or_locally_jumpable() then
               luasnip.expand_or_jump()
@@ -53,7 +53,7 @@ return {
               luasnip.jump(-1)
             end
           end, { "i", "s" }),
-        },
+        }),
         sources = {
           {
             name = "lazydev",
@@ -64,15 +64,15 @@ return {
           { name = "path" },
         },
         {
-          { name = "buffer" }
+          { name = "buffer" },
         },
       }
-    end
+    end,
   },
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
-    opts = {}
+    opts = {},
   },
   {
     "nvim-treesitter/nvim-treesitter",
@@ -83,50 +83,51 @@ return {
         "c",
         "lua",
         "vim",
-        "vimdoc"
+        "vimdoc",
       },
       auto_install = true,
       highlight = {
         enable = true,
-        additional_vim_regex_highlighting = false
+        additional_vim_regex_highlighting = false,
       },
       indent = {
-        enable = true
-      }
-    }
+        enable = true,
+      },
+    },
   },
   {
     "folke/todo-comments.nvim",
     event = "VimEnter",
     dependencies = {
-      "nvim-lua/plenary.nvim"
+      "nvim-lua/plenary.nvim",
     },
     opts = {
-      signs = false
-    }
+      signs = false,
+    },
   },
   {
-    "nvim-telescope/telescope.nvim", tag = "0.1.8",
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.8",
     dependencies = {
       "nvim-lua/plenary.nvim",
       {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = {
           "nvim-telescope/telescope.nvim",
-          "nvim-lua/plenary.nvim"
-        }
+          "nvim-lua/plenary.nvim",
+        },
       },
       {
         "nvim-telescope/telescope-fzf-native.nvim",
         build = "make",
         cond = function()
-          return vim.fn.executable "make" == 1
+          return vim.fn.executable("make") == 1
         end,
       },
       { "nvim-telescope/telescope-ui-select.nvim" },
-      { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font }
+      { "nvim-tree/nvim-web-devicons", enabled = vim.g.have_nerd_font },
     },
-    opts = function ()
+    opts = function()
       local builtin = require("telescope.builtin")
       local map = vim.keymap.set
 
@@ -147,34 +148,34 @@ return {
       map("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
       map("n", "<leader>/", function()
-        builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
+        builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
           winblend = 10,
           previewer = false,
-        })
+        }))
       end, { desc = "[/] Fuzzily search in current buffer" })
 
       map("n", "<leader>s/", function()
-        builtin.live_grep {
+        builtin.live_grep({
           grep_open_files = true,
           prompt_title = "Live Grep in Open Files",
-        }
+        })
       end, { desc = "[S]earch [/] in Open Files" })
 
       vim.keymap.set("n", "<leader>sn", function()
-        builtin.find_files { cwd = vim.fn.stdpath "config" }
+        builtin.find_files({ cwd = vim.fn.stdpath("config") })
       end, { desc = "[S]earch [N]eovim files" })
 
       return {
         defaults = {
           prompt_prefix = "$ ",
-          selection_caret = "# "
+          selection_caret = "# ",
         },
         extensions = {
           ["ui-select"] = {
             require("telescope.themes").get_dropdown(),
-          }
-        }
+          },
+        },
       }
-    end
-  }
+    end,
+  },
 }
